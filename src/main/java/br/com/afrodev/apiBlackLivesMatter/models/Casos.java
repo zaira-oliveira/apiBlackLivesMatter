@@ -21,10 +21,10 @@ public class Casos implements Serializable {
 
 	@NotBlank(message = "O nome é obrigatório")
 	private String nome;
-	private Integer idade;
+	private int idade;
 	private String cidade;
 	private String mes;
-	private Integer ano;
+	private int ano;
 
 	public Long getId() {
 		return id;
@@ -55,7 +55,7 @@ public class Casos implements Serializable {
 	}
 
 	public void setCidade(String cidade) {
-		this.cidade = cidade;
+		this.cidade = cidade.toUpperCase();
 	}
 
 	public String getMes() {
@@ -63,7 +63,7 @@ public class Casos implements Serializable {
 	}
 
 	public void setMes(String mes) {
-		this.mes = mes;
+		this.mes = mes.toUpperCase();
 	}
 
 	public Integer getAno() {
